@@ -8,8 +8,9 @@ This repository provides an implementation for aligning cross-lingual word embed
 2. [Data Preparation](#data-preparation)
 3. [Embedding Alignment](#embedding-alignment)
 4. [Evaluation](#evaluation)
-5. [Resources](#resources)
-6. [License](#license)
+5. [Unsupervised Approach](#unsupervised-approach)
+6. [Resources](#resources)
+7. [License](#license)
 
 ## Introduction
 
@@ -17,33 +18,39 @@ This project focuses on implementing and evaluating a supervised cross-lingual w
 
 ## Data Preparation
 
-1. **Training Monolingual Embeddings**:
+- [x] **Training Monolingual Embeddings**:
    - **English**: Train FastText embeddings on 10,000 English Wikipedia articles or use pre-trained FastText embeddings.
    - **Hindi**: Train FastText embeddings on 10,000 Hindi Wikipedia articles or use pre-trained FastText embeddings.
    - Limit vocabulary to the top 100,000 most frequent words in each language.
 
-2. **Bilingual Lexicon**:
+- [x] **Bilingual Lexicon**:
    - Obtain a list of word translation pairs from the [MUSE dataset](https://github.com/facebookresearch/MUSE). This lexicon is used for supervised alignment.
 
 ## Embedding Alignment
 
-1. **Procrustes Alignment**:
+- [x] **Procrustes Alignment**:
    - Implement the Procrustes alignment method to learn a linear mapping between English and Hindi embeddings using the bilingual lexicon.
    - Ensure that the mapping is orthogonal to preserve distances and angles between word vectors.
 
 ## Evaluation
 
-1. **Translation Accuracy**:
+- [x] **Translation Accuracy**:
    - Perform word translation from English to Hindi using the aligned embeddings.
    - Evaluate translation accuracy using the MUSE test dictionary.
    - Report Precision@1 and Precision@5 metrics for the word translation task.
 
-2. **Cosine Similarity Analysis**:
+- [x] **Cosine Similarity Analysis**:
    - Compute and analyze cosine similarities between word pairs to assess cross-lingual semantic similarity.
 
-3. **Ablation Study**:
+- [x] **Ablation Study**:
    - Conduct an ablation study to assess the impact of bilingual lexicon size on alignment quality.
    - Experiment with different training dictionary sizes (e.g., 5k, 10k, 20k word pairs).
+
+## Unsupervised Approach
+
+- [ ] **Unsupervised Alignment**:
+   - Implement an unsupervised alignment method such as Cross-Domain Similarity Local Scaling (CSLS) combined with adversarial training, as described in the MUSE paper.
+   - Compare the performance of the unsupervised method with the supervised Procrustes method.
 
 ## Resources
 
@@ -54,4 +61,3 @@ This project focuses on implementing and evaluating a supervised cross-lingual w
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
