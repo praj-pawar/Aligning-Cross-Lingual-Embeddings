@@ -8,10 +8,8 @@ This repository provides an implementation for aligning cross-lingual word embed
 2. [Data Preparation](#data-preparation)
 3. [Embedding Alignment](#embedding-alignment)
 4. [Evaluation](#evaluation)
-5. [Submission Requirements](#submission-requirements)
-6. [Optional Extra Credit](#optional-extra-credit)
-7. [Resources](#resources)
-8. [License](#license)
+5. [Resources](#resources)
+6. [License](#license)
 
 ## Introduction
 
@@ -46,16 +44,6 @@ This project focuses on implementing and evaluating a supervised cross-lingual w
 3. **Ablation Study**:
    - Conduct an ablation study to assess the impact of bilingual lexicon size on alignment quality.
    - Experiment with different training dictionary sizes (e.g., 5k, 10k, 20k word pairs).
-
-## Submission Requirements
-
-- **Source Code**: Provide Python code for the entire project, preferably in a Jupyter notebook or Google Colab notebook.
-- **Documentation**: Include clear instructions for reproducing your results. Ensure that code is well-commented and explanations are provided for each step.
-
-## Optional Extra Credit
-
-- Implement an unsupervised alignment method such as Cross-Domain Similarity Local Scaling (CSLS) combined with adversarial training, as described in the MUSE paper.
-- Compare the performance of the unsupervised method with the supervised Procrustes method.
 
 ## Resources
 
